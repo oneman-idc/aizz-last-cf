@@ -1,0 +1,21 @@
+{
+  "name": "aizz-last-cf",
+  "version": "0.6.6",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --x-provision",
+    "deploy:pages": "wrangler pages deploy public --project-name aizz-edge"
+  },
+  "dependencies": {
+    "fflate": "0.8.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20250726.0",
+    "@types/node": "22.15.3",
+    "typescript": "5.8.3",
+    "wrangler": "4.26.1"
+  }
+}

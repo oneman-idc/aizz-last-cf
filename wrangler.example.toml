@@ -1,0 +1,21 @@
+name = "aizz-edge"
+pages_build_output_dir = "./public"
+compatibility_date = "2025-07-26"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+AIZZ_VERSION = "0.6.6"
+ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "AIZZ_DB"
+database_name = "aizz-edge"
+database_id = "__D1_DATABASE_ID__"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "AIZZ_STORAGE"
+bucket_name = "aizz-edge-storage"
+
+[ai]
+binding = "AI"

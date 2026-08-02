@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIZZ Edge - 站群管理</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div id="login-shell" class="login-shell">
+    <section class="login-panel">
+      <div class="login-brand"><span class="brand-mark">AI</span><span><strong>AIZZ Edge</strong><small>Cloudflare 站群管理</small></span></div>
+      <form id="login-form" class="stack-form">
+        <label>用户名<input name="username" value="admin" autocomplete="username" required></label>
+        <label>密码<input type="password" name="password" autocomplete="current-password" required></label>
+        <button class="button primary wide" type="submit">登录</button>
+      </form>
+      <p class="login-version">Pages + Workers + D1 + R2</p>
+    </section>
+  </div>
+
+  <div id="app-shell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <button class="brand" data-page="dashboard"><span class="brand-mark">AI</span><span><strong>AIZZ</strong><small>Cloudflare Edge</small></span></button>
+      <nav>
+        <button data-page="dashboard"><span class="nav-icon">01</span>系统概览</button>
+        <div class="nav-label">核心资源</div>
+        <button data-page="integrations"><span class="nav-icon">02</span>API 授权仓</button>
+        <button data-page="resources"><span class="nav-icon">03</span>WEB 资源仓</button>
+        <button data-page="materials"><span class="nav-icon">04</span>网站材料仓</button>
+        <div class="nav-label">自动化</div>
+        <button data-page="deployments"><span class="nav-icon">05</span>合成与部署</button>
+        <button data-page="logs"><span class="nav-icon">06</span>批量执行记录</button>
+        <div class="nav-label">系统</div>
+        <button data-page="users" data-admin-only><span class="nav-icon">07</span>用户管理</button>
+        <button data-page="audit" data-admin-only><span class="nav-icon">08</span>审计日志</button>
+        <button data-page="profile"><span class="nav-icon">09</span>修改密码</button>
+      </nav>
+      <div class="sidebar-version" id="sidebar-version">AIZZ Edge</div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-button mobile-only" id="menu-button" type="button" title="打开导航">☰</button>
+        <span id="breadcrumb">控制台</span>
+        <div class="account"><span id="account-name"></span><span class="role-badge" id="account-role"></span><button class="link-button" id="logout-button">退出</button></div>
+      </header>
+      <div class="content" id="view"></div>
+    </main>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
